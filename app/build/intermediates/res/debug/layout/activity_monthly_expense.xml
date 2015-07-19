@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:class="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/card_bg"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="20dp"
+    tools:context="com.main.expensetracker.activities.MonthlyExpenseActivity">
+
+    <TextView
+        android:id="@+id/monthNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/rounded_icons"
+        android:height="50dip"
+        android:text=""
+        android:width="50dip" />
+
+    <TextView
+        android:id="@+id/monthName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="12dip"
+        android:layout_marginTop="12dip"
+        android:text="Dec"
+        android:textColor="#ffffffff"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/parentWrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/chart_button"
+        android:layout_alignRight="@+id/debitAmount"
+        android:layout_alignTop="@+id/monthNameLabel"
+        android:layout_toRightOf="@+id/monthNameLabel" />
+
+    <TextView
+        android:id="@+id/creditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/monthNameLabel"
+        android:layout_toRightOf="@+id/monthNameLabel"
+        android:layout_marginLeft="10dp"
+        android:gravity="right"
+        android:text="Credit : "
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/creditAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/creditText"
+        android:layout_alignLeft="@+id/debitAmount"
+        android:layout_toRightOf="@+id/creditText"
+        android:gravity="center_horizontal"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/debitText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/creditText"
+        android:layout_below="@+id/creditText"
+        android:gravity="right"
+        android:text="Debit : "
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/debitAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/debitText"
+        android:layout_below="@+id/creditAmount"
+        android:layout_toRightOf="@+id/debitText"
+        android:gravity="center_horizontal"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/chart_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/creditAmount"
+        android:src="@drawable/ic_find_next_holo_light" />
+
+    <WebView
+        android:id="@+id/chart_webview"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/chart_button"
+        android:visibility="gone"
+        android:layout_marginTop="25dp"
+        />
+    <view
+        android:id="@+id/pie_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chart_button"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        class="com.main.expensetracker.charts.PieView"
+         />
+
+    <com.main.expensetracker.utility.GChartProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/monthName"
+        android:progressDrawable="@android:drawable/progress_horizontal"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:indeterminate="false"
+        android:max="100"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/progressBarText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/progressBar"
+        android:layout_alignParentBottom="true"
+        android:text="100"
+        android:visibility="gone"/>
+
+</RelativeLayout><!-- From: file:/C:/Personal/Sandbox/app/src/main/res/layout/activity_monthly_expense.xml -->

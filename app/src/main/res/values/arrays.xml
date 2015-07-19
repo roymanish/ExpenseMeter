@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="rounded_icons">
+        <item>@drawable/rounded_icon_black</item>
+        <item>@drawable/rounded_icon_blue</item>
+        <item>@drawable/rounded_icon_green</item>
+        <item>@drawable/rounded_icon_purple</item>
+        <item>@drawable/rounded_icon_red</item>
+    </array>
+</resources>

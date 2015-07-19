@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:padding="20dp"
+    android:background="@drawable/card_bg"
+    tools:context="com.main.expensetracker.activities.MonthlyExpenseDetailActivity" >
+    
+     <TextView
+        android:id="@+id/iconBckgrnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:width="50dip"
+        android:height="50dip"
+        android:background="@drawable/rounded_icon_red"
+        android:text=""
+        />
+    
+    <TextView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="13dip"
+        android:layout_marginTop="3dip"
+        android:text="C"
+        android:textColor="#ffffffff"
+        android:textSize="35sp" />
+    
+    <TextView
+        android:id="@+id/transactionTypeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iconBckgrnd"
+        android:layout_marginLeft="10dip"
+        android:text="Credit"
+        android:textSize="20sp" />
+    
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/transactionTypeText"
+        android:layout_marginLeft="10dip"
+        android:visibility="visible"
+        android:text="10000"
+        android:textSize="20sp" />
+    
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iconBckgrnd"
+        android:layout_alignLeft="@+id/transactionTypeText"
+        android:layout_alignRight="@+id/amount"
+        android:visibility="visible"
+        android:layout_below="@+id/transactionTypeText"
+        android:text=""
+        android:textSize="15sp" />
+    
+    <TextView
+        android:id="@+id/expensCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/date"
+        android:layout_below="@+id/date"
+        android:text="Category" 
+        android:textColor="#646768"/>
+
+    <ImageView
+        android:id="@+id/editButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/amount"
+        android:layout_marginRight="14dp"
+        android:src="@drawable/edit" />
+
+
+</RelativeLayout>

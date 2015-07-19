@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <TextView
+        android:id="@+id/expNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="47dp"
+        android:text="Expense Name :"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/expNameValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/expNameLabel"
+        android:layout_alignBottom="@+id/expNameLabel"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/expNameLabel"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/expAmtLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/expNameLabel"
+        android:layout_below="@+id/expNameValue"
+        android:layout_marginTop="24dp"
+        android:text="Amount : "
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/expAmtValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/expAmtLabel"
+        android:layout_alignBottom="@+id/expAmtLabel"
+        android:layout_alignLeft="@+id/expNameValue"
+        android:ems="10" />
+    
+    <TextView
+        android:id="@+id/expenseCategoryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/expAmtValue"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/expNameValue"
+        android:text="Category :"
+        android:textSize="20sp" />
+    
+    <Spinner
+        android:id="@+id/categorySpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/expAmtValue"
+        android:layout_alignRight="@+id/viewButton"
+        android:layout_alignTop="@+id/expenseCategoryLabel" />
+
+    <Button
+        android:id="@+id/viewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/saveButton"
+        android:layout_alignRight="@+id/expAmtValue"
+        android:onClick="onViewClick"
+        android:text="View" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/categorySpinner"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@+id/expenseCategoryLabel"
+        android:onClick="onSaveClick"
+        android:text="Save" />
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+ 	android:padding="20dp"
+    android:background="@drawable/card_bg"
+    tools:context="com.main.expensetracker.activities.FixedExpensesDetailActivity" >
+
+    <TextView
+        android:id="@+id/expenseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/colonView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/expenseName"
+        android:layout_toRightOf="@+id/expenseName"
+        android:layout_alignTop="@+id/expenseName"
+        android:layout_marginLeft="10dp"
+        android:text=":"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/expenseValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/colonView"
+        android:layout_marginLeft="18dp"
+        android:layout_toRightOf="@+id/colonView"
+        android:textSize="20sp" />
+    
+    <ImageView
+        android:id="@+id/editButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/expenseValue"
+        android:layout_marginRight="14dp"
+        android:src="@drawable/edit" />
+
+    <TextView
+        android:id="@+id/expensType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/expenseName"
+        android:layout_below="@+id/expenseName"
+        android:text="Fixed Expense" 
+        android:textColor="#646768"/>
+    
+    <TextView
+        android:id="@+id/usrDefExpCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/expensType"
+        android:layout_below="@+id/expensType"
+        android:text="Category" 
+        android:textColor="#646768"/>
+    
+    </RelativeLayout><!-- From: file:/C:/Personal/Sandbox/app/src/main/res/layout/activity_fixed_expenses.xml -->

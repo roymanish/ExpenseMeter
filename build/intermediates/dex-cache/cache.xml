@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Personal\Sandbox\app\libs\libphonenumber-7.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c289f2b10d1815bd94c3ac0c25b29ff240b83565">
+        <dex dex="C:\Personal\Sandbox\app\build\intermediates\pre-dexed\debug\libphonenumber-7.0.3-d18ec94b16ae1c5715b79235ed1a72078b9f3b9b.jar" />
+    </item>
+    <item
+        jar="C:\Users\MaRoy\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3.1\ecb6e1f8e4b0e84c4b886c2f14a1500caf309757\gson-2.3.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="C:\Personal\Sandbox\app\build\intermediates\pre-dexed\debug\gson-2.3.1-6b37986c22c8768cb7380f62f30b51b3796e1d30.jar" />
+    </item>
+    <item
+        jar="C:\Softwares\adt-bundle-windows-x86_64-20140702\adt-bundle-windows-x86_64-20140702\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="C:\Personal\Sandbox\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-7c7fb01df749a15797ef534a633c59cc38ba7bc8.jar" />
+    </item>
+    <item
+        jar="C:\Personal\Sandbox\app\libs\listviewanimations_lib-core_3.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f3f9629b068554d8513a2aaf34418171bf430851">
+        <dex dex="C:\Personal\Sandbox\app\build\intermediates\pre-dexed\debug\listviewanimations_lib-core_3.1.0-4bd84a06870e31048a1da9787288b6b55d21a7d9.jar" />
+    </item>
+    <item
+        jar="C:\Personal\Sandbox\app\libs\nineoldandroids-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a43cf9e271b5bc564e880a0a4be63ab9c69c97f8">
+        <dex dex="C:\Personal\Sandbox\app\build\intermediates\pre-dexed\debug\nineoldandroids-2.4.0-7902b467ae7e32686479445076a0344766bbad07.jar" />
+    </item>
+
+</items>

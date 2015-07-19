@@ -1,0 +1,6 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.main.expensetracker.activities.NavigationDrawerActivity">
+
+</menu>
+<!-- From: file:/C:/Personal/Sandbox/app/src/main/res/menu/menu_navigation_drawer.xml -->

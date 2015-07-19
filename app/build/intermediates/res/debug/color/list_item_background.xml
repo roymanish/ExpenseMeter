@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    	<gradient
+        	android:startColor="#a2d4f2"
+        	android:endColor="#01aef0"
+        	android:angle="270" />
+	</shape>
+
+<!-- From: file:/C:/Personal/Sandbox/app/src/main/res/color/list_item_background.xml -->

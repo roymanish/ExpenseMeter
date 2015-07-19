@@ -1,0 +1,143 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <TextView
+        android:id="@+id/expNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="47dp"
+        android:text="Expense Name :"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/vExpNameValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/expNameLabel"
+        android:layout_alignBottom="@+id/expNameLabel"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/expNameLabel"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/expAmtLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/expNameLabel"
+        android:layout_below="@+id/vExpNameValue"
+        android:layout_marginTop="24dp"
+        android:text="Amount : "
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/vExpAmtValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/expAmtLabel"
+        android:layout_alignBottom="@+id/expAmtLabel"
+        android:layout_alignLeft="@+id/vExpNameValue"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/dateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vExpAmtValue"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/vExpNameValue"
+        android:text="Date :"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/dateValue"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/dateLabel"
+        android:layout_alignBottom="@+id/dateLabel"
+        android:layout_alignLeft="@+id/vExpAmtValue"
+        android:ems="10"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/datePicker"
+        android:layout_width="12dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/dateLabel"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/dateValue"
+        android:onClick="onCalendarButtonClick"
+        android:src="@drawable/ic__calendar" />
+
+    <TextView
+        android:id="@+id/expenseCategoryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/expAmtLabel"
+        android:layout_below="@+id/dateValue"
+        android:layout_marginTop="20sp"
+        android:text="Category :"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/categorySpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/dateValue"
+        android:layout_alignRight="@+id/viewButton"
+        android:layout_alignTop="@+id/expenseCategoryLabel" />
+
+    <Button
+        android:id="@+id/viewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/saveButton"
+        android:layout_alignRight="@+id/vExpAmtValue"
+        android:onClick="onViewClick"
+        android:text="View" />
+
+    <RadioGroup
+        android:id="@+id/radioAccountingType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/expenseCategoryLabel"
+        android:layout_below="@+id/categorySpinner"
+        android:layout_marginTop="10sp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/creditRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Credit"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/debitRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Debit"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioAccountingType"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@+id/dateLabel"
+        android:text="Save" />
+
+</RelativeLayout><!-- From: file:/C:/Personal/Sandbox/app/src/main/res/layout/fragment_add_variable_expense.xml -->

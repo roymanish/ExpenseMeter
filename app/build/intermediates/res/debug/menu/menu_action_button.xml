@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item
+        android:id="@+id/action_refresh"
+        android:orderInCategory="100"
+        android:visible="false"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/refresh"
+        android:title="@string/action_refresh"/>
+    
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+    
+    <item
+        android:id="@+id/action_change_month"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom"
+        android:visible="false"
+        android:title="@string/action_select_month" 
+        android:actionLayout="@layout/activity_spinner"/>
+    
+</menu>
+<!-- From: file:/C:/Personal/Sandbox/app/src/main/res/menu/menu_action_button.xml -->
