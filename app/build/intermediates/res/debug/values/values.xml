@@ -83,8 +83,9 @@
     <string name="preference_file_key_Fixed">Expense Tracker Fixed</string>
     <string name="preference_file_key_Variable">Expense Tracker Variable</string>
     <string name="taptoundo">Tap to undo</string>
-    <string name="title_activity_navigation_drawer">NavigationDrawerActivity</string>
-    <string name="title_activity_under_contruction">UnderContructionActivity</string>
+    <string name="title_activity_feed_back">Feed Back</string>
+    <string name="title_activity_navigation_drawer">Navigation Drawer</string>
+    <string name="title_activity_under_contruction">Under Contruction Activity</string>
     <string name="undo">Undo</string>
     <string name="undoall">Undo All</string>
     <string name="user_defined_expense">User Defined Expenses</string>

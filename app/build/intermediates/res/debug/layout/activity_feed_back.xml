@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.main.expensetracker.activities.FeedBackActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/emailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FEEDBACK"
+            android:textSize="10pt"
+            android:layout_gravity="center_horizontal">
+        </TextView>
+        <EditText
+            android:id="@+id/senderName"
+            android:layout_height="wrap_content"
+            android:hint="Enter your name here"
+            android:background="@android:drawable/edit_text"
+            android:inputType="textPersonName"
+            android:layout_width="fill_parent">
+        </EditText>
+        <EditText
+            android:id="@+id/senderEmail"
+            android:layout_height="wrap_content"
+            android:hint="Enter your e-mail id here"
+            android:inputType="textEmailAddress"
+            android:background="@android:drawable/edit_text"
+            android:layout_width="fill_parent">
+        </EditText>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar" />
+
+        <EditText
+            android:id="@+id/feedBackBody"
+            android:layout_height="wrap_content"
+            android:hint="Comments"
+            android:background="@android:drawable/edit_text"
+            android:inputType="textMultiLine"
+            android:lines="10"
+            android:layout_width="fill_parent">
+        </EditText>
+
+        <Button
+            android:id="@+id/sendFeedbackBtn"
+            android:layout_height="wrap_content"
+            android:text="Send Feedback"
+            android:onClick="sendFeedback"
+            android:layout_width="fill_parent">
+        </Button>
+
+    </LinearLayout>
+
+</RelativeLayout>
+<!-- From: file:/C:/Personal/Sandbox/app/src/main/res/layout/activity_feed_back.xml -->

@@ -69,15 +69,15 @@ public class NavigationDrawerActivity extends ListActivity {
         // adding nav drawer items to array
         // Home
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[0], navMenuIcons.getResourceId(0, -1)));
-        // Find People
+        // Events
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[1], navMenuIcons.getResourceId(1, -1)));
-        // Photos
+        // Trend Charts
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], navMenuIcons.getResourceId(2, -1)));
-        // Communities, Will add a counter here
+        // Suggestion
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1), true, "22"));
-        // Pages
+        // Feedback
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
-        // What's hot, We  will add a counter here
+        // Archive
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1), true, "50+"));
 
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
@@ -205,7 +205,7 @@ public class NavigationDrawerActivity extends ListActivity {
                 finish();// finishes the current activity
                 break;
             case 4:
-                Intent intent4 = new Intent(this, UnderContructionActivity.class);
+                Intent intent4 = new Intent(this, FeedBackActivity.class);
                 startActivity(intent4);
                 finish();// finishes the current activity
                 break;

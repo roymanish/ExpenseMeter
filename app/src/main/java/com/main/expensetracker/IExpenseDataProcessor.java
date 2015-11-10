@@ -35,7 +35,7 @@ public interface IExpenseDataProcessor {
 	
 	public List<UserDefinedExpenseData> readUserDefinedDataFromFileForWeek(String fileName, Context ctx, String weekNbr);
 	
-	public MonthWiseExpenseData readTransactionDataFromFileForMonth(String fileName,String key, Context ctx, String monthName);
+	public MonthWiseExpenseData readTransactionDataFromFileForMonth(String fileName,String key, Context ctx, String monthName,String year);
 	
 	public List<UserDefinedExpenseData> readFixedExpenseDataFromFile(Context ctx);
 	

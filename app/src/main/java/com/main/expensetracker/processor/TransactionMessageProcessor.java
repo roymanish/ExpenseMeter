@@ -218,7 +218,8 @@ public class TransactionMessageProcessor implements ITransactionMessageProcessor
 		Matcher cashWdlMatcher = cashWdlPattern.matcher(smsBody);
 
 		String month = AppUtil.getMonthFromStringDate(sms.getDate(), AppConstants.MONTH_NAME_SHORT);
-		MonthWiseExpenseData monthWiseData = AppUtil.getMonthWiseSmsData(month, monthWiselist);
+		String year = AppUtil.getYearFromStringDate(sms.getDate());
+		MonthWiseExpenseData monthWiseData = AppUtil.getMonthWiseSmsData(month,year, monthWiselist);
 		Date smsDate  = AppUtil.getDateFromString(sms.getDate(), "MM/dd/yy HH:mm");
 
 		if(monthWiseData != null){
@@ -242,7 +243,8 @@ public class TransactionMessageProcessor implements ITransactionMessageProcessor
 
 			//Start of new month. Calculating carry forward amount from previous month
 			String pervMonth = AppUtil.getMonthFromDate(AppUtil.subtractMonthFromDate(smsDate,1), AppConstants.MONTH_NAME_SHORT);
-			MonthWiseExpenseData prevMonthWiseData = AppUtil.getMonthWiseSmsData(pervMonth, monthWiselist);
+			year = AppUtil.getYearFromDate(AppUtil.subtractMonthFromDate(smsDate, 1));
+			MonthWiseExpenseData prevMonthWiseData = AppUtil.getMonthWiseSmsData(pervMonth,year, monthWiselist);
 			Double carryForwardAmount = prevMonthWiseData == null ? 0D : (prevMonthWiseData.getCreditAmount()+prevMonthWiseData.getCarryForwardAmount() - prevMonthWiseData.getDebitAmount());
 
 			//Creating new month data

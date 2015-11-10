@@ -57,8 +57,9 @@
 
     <!-- Content Description -->
     <string name="desc_list_item_icon">Item Icon</string>
-    <string name="title_activity_navigation_drawer">NavigationDrawerActivity</string>
-    <string name="title_activity_under_contruction">UnderContructionActivity</string>
+    <string name="title_activity_navigation_drawer">Navigation Drawer</string>
+    <string name="title_activity_under_contruction">Under Contruction Activity</string>
+    <string name="title_activity_feed_back">Feed Back</string>
     
     
 </resources>

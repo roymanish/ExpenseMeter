@@ -3,11 +3,6 @@
  */
 package com.main.expensetracker.activities;
 
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-
 import android.app.ListActivity;
 import android.content.Intent;
 import android.graphics.Color;
@@ -32,6 +27,11 @@ import com.main.expensetracker.processor.ExpenseDataProcessor;
 import com.main.expensetracker.utility.AppUtil;
 import com.nhaarman.listviewanimations.appearance.simple.SwingBottomInAnimationAdapter;
 
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
 /**
  * @author MaRoy
  *
@@ -41,6 +41,7 @@ public class WeeklyExpenseActivity extends ListActivity implements OnItemSelecte
 	ExpenseDataProcessor dataProcessor;
 	Spinner spinner;
 	String monthName;
+	String year;
 	MonthWiseExpenseData monthWiseData;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,7 @@ public class WeeklyExpenseActivity extends ListActivity implements OnItemSelecte
 		//setContentView(R.layout.activity_viewpager_fragment);
 
 		monthName = AppUtil.getMonthFromDate(Calendar.getInstance().getTime(), AppConstants.MONTH_NAME_SHORT);
+		year = AppUtil.getYearFromDate(Calendar.getInstance().getTime());
 		this.populateAdapter();
 
 	}
@@ -114,73 +116,53 @@ public class WeeklyExpenseActivity extends ListActivity implements OnItemSelecte
 		spinner.setSelection(position);
 
 		int selMonth = spinner.getSelectedItemPosition();
-		Date anyDate;
-		switch(selMonth){
+		Date anyDate = Calendar.getInstance().getTime();
 
+		switch(selMonth){
 		case 0:
 			anyDate = this.getAnyDateOfMonth(Calendar.JANUARY);
-			monthName = AppUtil.getMonthFromDate(anyDate, AppConstants.MONTH_NAME_SHORT);
-			this.populateAdapter();
 			break;
 		case 1:
 			anyDate = this.getAnyDateOfMonth(Calendar.FEBRUARY);
-			monthName = AppUtil.getMonthFromDate(anyDate, AppConstants.MONTH_NAME_SHORT);
-			this.populateAdapter();
 			break;
 		case 2:
 			anyDate = this.getAnyDateOfMonth(Calendar.MARCH);
-			monthName = AppUtil.getMonthFromDate(anyDate, AppConstants.MONTH_NAME_SHORT);
-			this.populateAdapter();
 			break;
 		case 3:
 			anyDate = this.getAnyDateOfMonth(Calendar.APRIL);
-			monthName = AppUtil.getMonthFromDate(anyDate, AppConstants.MONTH_NAME_SHORT);
-			this.populateAdapter();
 			break;
 		case 4:
 			anyDate = this.getAnyDateOfMonth(Calendar.MAY);
-			monthName = AppUtil.getMonthFromDate(anyDate, AppConstants.MONTH_NAME_SHORT);
-			this.populateAdapter();
 			break;
 		case 5:
 			anyDate = this.getAnyDateOfMonth(Calendar.JUNE);
-			monthName = AppUtil.getMonthFromDate(anyDate, AppConstants.MONTH_NAME_SHORT);
-			this.populateAdapter();
 			break;
 		case 6:
 			anyDate = this.getAnyDateOfMonth(Calendar.JULY);
-			monthName = AppUtil.getMonthFromDate(anyDate, AppConstants.MONTH_NAME_SHORT);
-			this.populateAdapter();
 			break;
 		case 7:
 			anyDate = this.getAnyDateOfMonth(Calendar.AUGUST);
-			monthName = AppUtil.getMonthFromDate(anyDate, AppConstants.MONTH_NAME_SHORT);
-			this.populateAdapter();
 			break;
 		case 8:
 			anyDate = this.getAnyDateOfMonth(Calendar.SEPTEMBER);
-			monthName = AppUtil.getMonthFromDate(anyDate, AppConstants.MONTH_NAME_SHORT);
-			this.populateAdapter();
 			break;
 		case 9:
 			anyDate = this.getAnyDateOfMonth(Calendar.OCTOBER);
-			monthName = AppUtil.getMonthFromDate(anyDate, AppConstants.MONTH_NAME_SHORT);
-			this.populateAdapter();
 			break;
 		case 10:
 			anyDate = this.getAnyDateOfMonth(Calendar.NOVEMBER);
-			monthName = AppUtil.getMonthFromDate(anyDate, AppConstants.MONTH_NAME_SHORT);
-			this.populateAdapter();
 			break;
 		case 11:
 			anyDate = this.getAnyDateOfMonth(Calendar.DECEMBER);
-			monthName = AppUtil.getMonthFromDate(anyDate, AppConstants.MONTH_NAME_SHORT);
-			this.populateAdapter();
 			break;
 		default :
 			break;
 
 		}
+
+		monthName = AppUtil.getMonthFromDate(anyDate, AppConstants.MONTH_NAME_SHORT);
+		year = AppUtil.getYearFromDate(anyDate);
+		this.populateAdapter();
 
 	}
 
@@ -193,7 +175,7 @@ public class WeeklyExpenseActivity extends ListActivity implements OnItemSelecte
 	private void populateAdapter(){
 
 		dataProcessor = ExpenseDataProcessor.getInstance();
-		monthWiseData = dataProcessor.readTransactionDataFromFileForMonth(AppConstants.TRANSACTION_STORAGE_FILE, AppConstants.MONTHLY_LIST, getApplicationContext(),monthName);
+		monthWiseData = dataProcessor.readTransactionDataFromFileForMonth(AppConstants.TRANSACTION_STORAGE_FILE, AppConstants.MONTHLY_LIST, getApplicationContext(),monthName,year);
 
 		if(monthWiseData == null){
 			Toast.makeText(getApplicationContext(), "No data for "+monthName, Toast.LENGTH_SHORT).show();

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.main.expensetracker.activities"
-    android:versionCode="13"
-    android:versionName="1.13" >
+    android:versionCode="14"
+    android:versionName="1.14" >
 
     <uses-sdk
         android:minSdkVersion="17"
@@ -10,6 +10,14 @@
 
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+    <android:uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
 
     <application
         android:allowBackup="true"
@@ -112,6 +120,10 @@
         <activity
             android:name="com.main.expensetracker.activities.UnderContructionActivity"
             android:label="@string/title_activity_under_contruction" >
+        </activity>
+        <activity
+            android:name="com.main.expensetracker.activities.FeedBackActivity"
+            android:label="@string/title_activity_feed_back" >
         </activity>
     </application>
 

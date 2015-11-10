@@ -11,6 +11,7 @@ import android.graphics.drawable.Drawable;
 
 import com.main.expensetracker.activities.R;
 import com.main.expensetracker.data.MonthWiseExpenseData;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.DateFormat;
@@ -109,6 +110,26 @@ public class AppUtil {
 
 	    return s;
 	}
+
+	public static String getYearFromDate(Date date){
+
+		Calendar c = Calendar.getInstance();
+		c.setTime(date);
+		SimpleDateFormat  formatter = new SimpleDateFormat("yyyy");
+		String s = formatter.format(c.getTime());
+
+		return s;
+	}
+
+	public static String getYearFromStringDate(String strDate){
+
+		Date date = AppUtil.getDateFromString(strDate, "MM/dd/yy HH:mm");
+		if(date == null){
+			date = AppUtil.getDateFromString(strDate, "MM/dd/yy");
+		}
+
+		return AppUtil.getYearFromDate(date);
+	}
 	
 	public static String getWeekFromDate(Date date){
 		Calendar c = Calendar.getInstance();
@@ -171,11 +192,11 @@ public class AppUtil {
 	 * @param monthWiseList
 	 * @return
 	 */
-	public static MonthWiseExpenseData getMonthWiseSmsData(String month, List<MonthWiseExpenseData> monthWiseList){
+	public static MonthWiseExpenseData getMonthWiseSmsData(String month, String year, List<MonthWiseExpenseData> monthWiseList){
 
 		for(MonthWiseExpenseData smsData : monthWiseList){
 
-			if(month.equalsIgnoreCase(smsData.getMonth())){
+			if(month.equalsIgnoreCase(smsData.getMonth()) && year.equalsIgnoreCase(getYearFromDate(smsData.getFirstDateOfMonth()))){
 				return smsData;
 			}
 		}

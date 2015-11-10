@@ -205,7 +205,7 @@ public class ExpenseDataProcessor implements IExpenseDataProcessor{
 	 * (non-Javadoc)
 	 * @see com.main.expensetracker.IExpenseDataProcessor#readTransactionDataFromFileForMonth(java.lang.String, java.lang.String, android.content.Context, java.lang.String)
 	 */
-	public MonthWiseExpenseData readTransactionDataFromFileForMonth(String fileName,String key, Context ctx, String monthName){
+	public MonthWiseExpenseData readTransactionDataFromFileForMonth(String fileName,String key, Context ctx, String monthName,String year){
 
 
 		String listJson = this.readDataFromFile(fileName,key, ctx);
@@ -215,7 +215,7 @@ public class ExpenseDataProcessor implements IExpenseDataProcessor{
         if(monthwiseList != null && !monthwiseList.isEmpty()) {
             for (MonthWiseExpenseData data : monthwiseList) {
 
-                if (monthName.equalsIgnoreCase(data.getMonth()))
+                if (monthName.equalsIgnoreCase(data.getMonth()) && year.equalsIgnoreCase(AppUtil.getYearFromDate(data.getFirstDateOfMonth())))
                     return data;
             }
         }
